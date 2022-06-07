@@ -1,5 +1,5 @@
 
-import { container, Box, Heading, SimpleGrid, Divider, Container } from '@chakra-ui/react'
+import { Heading, SimpleGrid, Container } from '@chakra-ui/react'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import thumbinkdrop from '../public/images/logo.png'
