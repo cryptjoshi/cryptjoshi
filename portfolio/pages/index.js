@@ -7,18 +7,8 @@ import Paragraph from '../components/paragraphs'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 const Page = () => {
   return (
-    <Container>
-      {/* <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} align="center"> */}
-      {/*   Hello I am Cryptjoshi;Full Stack Developer based on Earth618. */}
-      {/* </Box> */}
-      {/* <Box display={{ md: 'flex' }}> */}
-      {/*   <Box flexGrow={1}> */}
-      {/*     <Heading as="h2" variant={"page-title"}> */}
-      {/*       Pornchai Khamrat */}
-      {/*     </Heading> */}
-      {/*     <p>Developer / Developer Operators / Music Composer</p> */}
-      {/*   </Box> */}
-      <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} align="center">
+    <Container align="center">
+      <Box flexShrink={0} mt={{ base: 4, md: 4 }}>
         <Image
           borderColor={"whiteAlpha.800"}
           borderWidth={2}
@@ -30,7 +20,12 @@ const Page = () => {
           alt='Profile Picture'
         />
       </Box>
-      {/* </Box> */}
+      <Box flexGrow={1}>
+        <Heading as="h2" variant={"page-title"}>
+          Jacky Yun
+        </Heading>
+        <p>Developer / Developer Operators</p>
+      </Box>
       {/* <Section delay={0.1}> */}
       {/*   <Heading as="h3" variant={"section-title"}> */}
       {/*     Works */}
