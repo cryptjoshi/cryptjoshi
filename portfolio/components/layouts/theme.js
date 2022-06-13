@@ -49,7 +49,7 @@ const Navbar = props => {
         display="flex" p={2}
         maxW={"container.md"}
         wrap="wrap"
-        align="ceneter"
+        align="center"
         justify="space-between"
       >
         <ThemeToggleButton />
