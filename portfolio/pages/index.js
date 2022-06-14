@@ -3,6 +3,7 @@ import { Box, Container, Heading, Image, useColorModeValue, Link, Button } from 
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
+import Credits from '../components/crdits'
 import Paragraph from '../components/paragraphs'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Profile from '../components/plogo'
@@ -34,19 +35,89 @@ const Page = () => {
           <Heading as="h3" variant={"Section-title"}>
             Skill
           </Heading>
-          <Box align={"Content"} my={4}>
-            Skill
-          </Box>
-          <Heading as="h3" variant={"Section-title"}>
-            Stack
-          </Heading>
-          <Box align={"Content"} my={4}>
-            Stack
-          </Box>
+          <Credits align={"Content"} my={4} >
+            <div className='movie'>life of john doe</div>
+            <div className='job'>directed by</div>
+            <div className='name'>christopher nolan</div>
+            <div className='job'>produced by</div>
+            <div className='name'>steven spielberg</div>
+            <div className='job'>screenplay by</div>
+            <div className='name'>michael bay</div>
+            <div className='job'>director of photography</div>
+            <div className='name'>wolfgang petersen</div>
+            <div className='job'>story</div>
+            <div className='name'>david fincher</div>
+            <div className='job'>visual effects supervisor</div>
+            <div className='name'>jerry bruckheimer</div>
+            <div className='job'>cast supervisor</div>
+            <div className='name'>john doe</div>
+            <div className='job'>directed by</div>
+            <div className='name'>christopher nolan</div>
+            <div className='job'>produced by</div>
+            <div className='name'>steven spielberg</div>
+            <div className='job'>screenplay by</div>
+            <div className='name'>michael bay</div>
+            <div className='job'>director of photography</div>
+            <div className='name'>wolfgang petersen</div>
+            <div className='job'>story</div>
+            <div className='name'>david fincher</div>
+            <div className='job'>visual effects supervisor</div>
+            <div className='name'>jerry bruckheimer</div>
+            <div className='job'>cast supervisor</div>
+            <div className='name'>john doe</div>
+            <div className='job'>directed by</div>
+            <div className='name'>christopher nolan</div>
+            <div className='job'>produced by</div>
+            <div className='name'>steven spielberg</div>
+            <div className='job'>screenplay by</div>
+            <div className='name'>michael bay</div>
+            <div className='job'>director of photography</div>
+            <div className='name'>wolfgang petersen</div>
+            <div className='job'>story</div>
+            <div className='name'>david fincher</div>
+            <div className='job'>visual effects supervisor</div>
+            <div className='name'>jerry bruckheimer</div>
+            <div className='job'>cast supervisor</div>
+            <div className='name'>john doe</div>
+            <div className='job'>directed by</div>
+            <div className='name'>christopher nolan</div>
+            <div className='job'>produced by</div>
+            <div className='name'>steven spielberg</div>
+            <div className='job'>screenplay by</div>
+            <div className='name'>michael bay</div>
+            <div className='job'>director of photography</div>
+            <div className='name'>wolfgang petersen</div>
+            <div className='job'>story</div>
+            <div className='name'>david fincher</div>
+            <div className='job'>visual effects supervisor</div>
+            <div className='name'>jerry bruckheimer</div>
+            <div className='job'>cast supervisor</div>
+            <div className='name'>john doe</div>
+            <div className='job'>directed by</div>
+            <div className='name'>christopher nolan</div>
+            <div className='job'>produced by</div>
+            <div className='name'>steven spielberg</div>
+            <div className='job'>screenplay by</div>
+            <div className='name'>michael bay</div>
+            <div className='job'>director of photography</div>
+            <div className='name'>wolfgang petersen</div>
+            <div className='job'>story</div>
+            <div className='name'>david fincher</div>
+            <div className='job'>visual effects supervisor</div>
+            <div className='name'>jerry bruckheimer</div>
+            <div className='job'>cast supervisor</div>
+            <div className='name'>john doe</div>
+          </Credits>
+          {/* <Heading as="h3" variant={"Section-title"}> */}
+          {/*   Stack */}
+          {/* </Heading> */}
+          {/* <Box align={"Content"} my={4}> */}
+          {/*   Stack */}
+          {/* </Box> */}
         </Layout>
       </Section>
 
-    </Container>
+    </Container >
   )
 }
 
