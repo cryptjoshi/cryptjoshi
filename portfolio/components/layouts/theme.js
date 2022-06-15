@@ -40,8 +40,9 @@ const Navbar = props => {
       position={"fixed"}
       as="nav"
       w={"100%"}
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      style={{ backdropFilter: 'blur(10px)' }}
+      // bg={useColorModeValue('#ffffff40', '#20202380')}
+      bg={"#000000"}
+      // style={{ backdropFilter: 'blur(20px)' }}
       zIndex={1}
       {...props}
     >
@@ -49,8 +50,8 @@ const Navbar = props => {
         display="flex" p={2}
         maxW={"container.md"}
         wrap="wrap"
-        align="center"
-        justify="space-between"
+      // align="right"
+      // justify="space-between"
       >
         <ThemeToggleButton />
       </Container>
