@@ -5,6 +5,14 @@ const styles = {
   global: props => ({
     body: {
       bg: mode('#ffffff', '#202023')(props)
+    },
+    footer: {
+      minHeight: '400px',
+      padding: '1rem 0',
+      borderTop: '1px solid #202023',
+      bg: mode('#ffffff', '#202023')(props),
+      bottom: 0,
+      left: 0,
     }
   })
 }

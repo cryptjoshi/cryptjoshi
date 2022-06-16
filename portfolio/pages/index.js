@@ -8,35 +8,33 @@ import Paragraph from '../components/paragraphs'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import ToggleThemeBtn from '../components/theme-toggle-button.js'
 import Prohead from '../components/profileh'
+import Probanner from '../components/profileb'
+import Logo from '../components/brand'
 import skill from '../data/skill'
+
+
 const Page = () => {
   return (
     <Container align="center">
-      <Prohead paddingTop={4} />
-      <Section>
+      <Prohead paddingTop={4} name="Jacky Yun" title="developer/developer Operations" head="Skill" />
+      <Section height='90px'>
         <Credits align={"Content"} my={4} >
-          {skill && skill.map(skill =>
-            <Box><div className='movie'>{skill.cast}</div>
+          {skill && skill.map((skill, index) =>
+            <Box paddingBottom={15} key={index}>
+              <Logo src={skill.image} />
+              <div className='movie'>{skill.cast}</div>
               <div className='job'>{skill.name}</div>
-              <Image
-                src={skill.image}
-                height={26}
-                width={26}
-                layout="fixed"
-                rounded="md"
-              />
             </Box>
           )}
         </Credits>
       </Section>
+      <Probanner mt={40} name="Stack" />
+      <Section>
 
-      {/* <Heading as="h3" variant={"Section-title"}> */}
-      {/*   Stack */}
-      {/* </Heading> */}
-      {/* <Box align={"Content"} my={4}> */}
-      {/*   Stack */}
-      {/* </Box> */}
+      </Section>
+      <Box as="footer">
 
+      </Box>
     </Container >
   )
 }

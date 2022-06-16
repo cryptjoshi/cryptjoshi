@@ -15,6 +15,11 @@ const skills = [
     image: cplus
   },
   {
+    cast: "C,C#",
+    name: "C,C# Language",
+    image: csharp
+  },
+  {
     cast: "Go",
     name: "GoLang Language",
     image: golang
