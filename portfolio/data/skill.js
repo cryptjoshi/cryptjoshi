@@ -10,6 +10,10 @@ import vue from './../assets/images/skills/vuejs.png'
 
 const skills = [
   {
+    cast: "Skill",
+    name: "",
+    image: false
+  }, {
     cast: "C,C++",
     name: "C,C++ Language",
     image: cplus
@@ -41,7 +45,7 @@ const skills = [
   },
   {
     cast: "React",
-    name: "React Lanugage",
+    name: "React Framework",
     image: react
   },
   {
@@ -51,7 +55,7 @@ const skills = [
   },
   {
     cast: "Vue",
-    name: "VueJS Language",
+    name: "VueJS Framework",
     image: vue
   }
 ]

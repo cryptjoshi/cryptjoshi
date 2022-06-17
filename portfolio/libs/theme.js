@@ -4,15 +4,16 @@ import { mode } from '@chakra-ui/theme-tools'
 const styles = {
   global: props => ({
     body: {
-      bg: mode('#ffffff', '#202023')(props)
+      bg: mode('#ffffff', '#202023')(props),
+      overflow: 'hidden'
     },
     footer: {
-      minHeight: '400px',
+      // minHeight: '400px',
       padding: '1rem 0',
       borderTop: '1px solid #202023',
       bg: mode('#ffffff', '#202023')(props),
-      bottom: 0,
-      left: 0,
+      // bottom: 0,
+      // left: 0,
     }
   })
 }
