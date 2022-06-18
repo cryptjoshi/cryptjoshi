@@ -5,7 +5,9 @@ const styles = {
   global: props => ({
     body: {
       bg: mode('#ffffff', '#202023')(props),
-      overflow: 'hidden'
+      overflow: 'hidden',
+      transitionProperty: "background-color",
+      transitionDuration: "200ms",
     },
     footer: {
       // minHeight: '400px',
