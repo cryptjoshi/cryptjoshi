@@ -12,7 +12,8 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
+  useColorMode
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from '../theme-toggle-button'
@@ -20,7 +21,8 @@ import ThemeToggleButton from '../theme-toggle-button'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue("neutral.100", "neutralD.50")
+  // const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
   return (
     <NextLink href={href}>
       <Link
@@ -40,7 +42,9 @@ const Navbar = props => {
       position={"fixed"}
       as="nav"
       w={"100%"}
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      bg={useColorModeValue("neutral.100", "neutralD.50")}
+      // const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
+      // bg={useColorModeValue('#ffffff40', '#20202380')}
       style={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
       {...props}

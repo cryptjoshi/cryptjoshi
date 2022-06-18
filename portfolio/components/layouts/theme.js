@@ -20,7 +20,9 @@ import ThemeToggleButton from '../theme-toggle-button'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
+  // const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue("neutral.100", "neutralD.50")
+  // const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
   return (
     <NextLink href={href}>
       <Link
@@ -41,9 +43,15 @@ const Navbar = props => {
       as="nav"
       w={"100%"}
       // bg={useColorModeValue('#ffffff40', '#20202380')}
-      bg={"#000000"}
+      bg={useColorModeValue("white", "neutralD.100")}
+      display={{ base: "none", md: "block" }}
+      borderBottomWidth="2px"
+      borderBottomColor={useColorModeValue("neutral.400", "neutralD.400")}
+      shadow="0 0 10px 0 rgba(0,0,0,0.0035)"
+      // const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
+      // bg={"#000000"}
       // style={{ backdropFilter: 'blur(20px)' }}
-      zIndex={1}
+      zIndex={99}
       {...props}
     >
       <Container

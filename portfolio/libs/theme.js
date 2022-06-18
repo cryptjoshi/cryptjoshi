@@ -1,10 +1,47 @@
 import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
+import {
+  sand,
+  sandDark,
+  blue,
+  blueDark,
+  yellow,
+  yellowDark,
+  amber,
+  amberDark,
+} from "@radix-ui/colors";
+
+const transformRadixToChakraFormat = (scale) => {
+  const output = Object.values(scale).reduce(
+    (accmulator, currentValue, index) => {
+      if (index === 0) {
+        accmulator[`50`] = currentValue
+      } else {
+        accmulator[`${index}00`] = currentValue
+      }
+      return accmulator
+    },
+    {}
+  )
+  return output
+}
+
+const radixNeutral = transformRadixToChakraFormat(sand)
+const radixNeutralDark = transformRadixToChakraFormat(sandDark)
+const radixPrimary = transformRadixToChakraFormat(blue)
+const radixPrimaryD = transformRadixToChakraFormat(blueDark)
 
 const styles = {
   global: props => ({
+    html: {
+      scrollBehavior: "smooth"
+    },
     body: {
-      bg: mode('#ffffff', '#202023')(props),
+
+      color: mode("neutral.1100", "neutralD.1100")(props),
+      overflow: 'hidden',
+      // bg: mode('#ffffff', '#202023')(props),
+      bg: mode("neutral.100", "neutralD.50")(props),
       overflow: 'hidden',
       transitionProperty: "background-color",
       transitionDuration: "200ms",
@@ -13,10 +50,15 @@ const styles = {
       // minHeight: '400px',
       padding: '1rem 0',
       borderTop: '1px solid #202023',
-      bg: mode('#ffffff', '#202023')(props),
+      // bg: mode('#ffffff', '#202023')(props),
+      bg: mode("neutral.100", "neutralD.50")(props),
+      overflow: 'hidden',
       // bottom: 0,
       // left: 0,
-    }
+    },
+    MozOsxFontSmoothing: "grayscale",
+    WebkitFontSmoothing: "antialiased",
+    textRendering: "optimizeLegibility"
   })
 }
 const components = {
@@ -45,6 +87,18 @@ const fonts = {
   heading: 'M PLUS Rounded 1c'
 }
 const colors = {
+  neutral: {
+    ...radixNeutral
+  },
+  neutralD: {
+    ...radixNeutralDark
+  },
+  primary: {
+    ...radixPrimary
+  },
+  primaryD: {
+    ...radixPrimaryD
+  },
   glassTeal: '#88ccca'
 }
 const config = {

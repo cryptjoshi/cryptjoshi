@@ -5,7 +5,8 @@ const ProHead = ({ title, name, head }) => {
   return (
     <Box
       w={"100%"}
-      bg={useColorModeValue('#ffffff', '#20202380')}
+      // bg={useColorModeValue('#ffffff', '#20202380')}
+      bg={useColorModeValue('neutral.100', 'neutralD.50')}
       style={{ backdropFilter: 'blur(20px)' }}
       zIndex={1}
       paddingTop={5}
