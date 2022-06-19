@@ -3,12 +3,13 @@ import Head from 'next/head'
 import Layout from '../components/layouts/main'
 import Fonts from "../components/fonts";
 import theme from "../libs/theme";
+import customTheme from './../theme'
 import { AnimatePresence } from 'framer-motion'
 import '../styles/styles.css'
-import Navbar from '../components/layouts/theme'
+import Header from '../components/layouts/theme'
 const Website = ({ Component, pageProps, router }) => {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={customTheme}>
       <Fonts />
       {/* <Layout router={router}> */}
       <AnimatePresence exitBeforeEnter initial={true}>
@@ -25,7 +26,7 @@ const Website = ({ Component, pageProps, router }) => {
           />
           <meta name="theme-color" content="#2BB0EC" />
         </Head>
-        <Navbar />
+        <Header />
         <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
           <Component  {...pageProps} key={router.route} />
         </Box>
