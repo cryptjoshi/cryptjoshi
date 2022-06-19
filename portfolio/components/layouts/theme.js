@@ -4,7 +4,7 @@ import {
   Container,
   Box,
   Link,
-  Stack,
+  VStack,
   Heading,
   Flex,
   Menu,
@@ -12,11 +12,22 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
+  HStack,
+  Icon,
+  useDisclosure
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from '../theme-toggle-button'
 
+import {
+  BookmarkIcon,
+  BookOpenIcon,
+  ChevronDownIcon,
+  LightningBoltIcon,
+  MenuIcon,
+  DotsHorizontalIcon,
+} from "@heroicons/react/solid";
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -37,6 +48,9 @@ const LinkItem = ({ href, path, children }) => {
 
 const Navbar = props => {
   const { path } = props
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box
       position={"fixed"}
@@ -55,13 +69,40 @@ const Navbar = props => {
       {...props}
     >
       <Container
-        display="flex" p={2}
-        maxW={"container.md"}
-        wrap="wrap"
+      // display="flex" p={2}
+      // maxW={"container.md"}
+      // wrap="wrap"
       // align="right"
       // justify="space-between"
       >
-        <ThemeToggleButton />
+
+        <VStack align="start" spacing={0}>
+          <HStack justify="space-between" w="100%" h={16}>
+            <HStack ml={-4} spacing={2}>
+
+              <Menu isOpen={isOpen}>
+                <MenuButton
+                  bg={useColorModeValue("neutral.100", "neutralD.300")}
+                  _hover={{
+                    bg: useColorModeValue("neutral.200", "neutralD.400"),
+                  }}
+                  onMouseEnter={onOpen}
+                  onMouseLeave={onClose}
+                  rounded="full"
+                >
+                  <IconButton
+                    aria-label="Addtional Menu"
+                    variant="ghost"
+                    icon={<Icon as={DotsHorizontalIcon} />}
+                  />
+                </MenuButton>
+              </Menu>
+            </HStack>
+            <HStack>
+              <ThemeToggleButton />
+            </HStack>
+          </HStack>
+        </VStack>
       </Container>
     </Box>
   )
