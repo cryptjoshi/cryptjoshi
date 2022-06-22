@@ -17,7 +17,7 @@ import {
   Icon,
   useDisclosure
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+// import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from '../theme-toggle-button'
 
 import {
