@@ -94,78 +94,78 @@ const Header = () => {
           <HStack justify="space-between" w="100%" h={16}>
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>
-              <Menu isOpen={isOpen}>
-                <MenuButton
-                  bg={useColorModeValue("neutral.100", "neutralD.300")}
-                  _hover={{
-                    bg: useColorModeValue("neutral.200", "neutralD.400"),
-                  }}
-                  onMouseEnter={onOpen}
-                  onMouseLeave={onClose}
-                  rounded="full"
-                >
-                  <IconButton
-                    aria-label="Addtional Menu"
-                    variant="ghost"
-                    icon={<Icon as={DotsHorizontalIcon} />}
-                  />
-                </MenuButton>
-                <MenuList
-                  bg={useColorModeValue("white", "neutralD.100")}
-                  borderColor={useColorModeValue("neutral.400", "neutralD.400")}
-                  onMouseEnter={onOpen}
-                  onMouseLeave={onClose}
-                >
-                  <Link href="/books">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                        <Icon
-                          as={BookOpenIcon}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Books</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/bookmarks">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                        <Icon
-                          as={BookmarkIcon}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Bookmarks</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/tools">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                        <Icon
-                          as={LightningBoltIcon}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Tools</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                </MenuList>
-              </Menu>
+              {/* <Menu isOpen={isOpen}> */}
+              {/*   <MenuButton */}
+              {/*     bg={useColorModeValue("neutral.100", "neutralD.300")} */}
+              {/*     _hover={{ */}
+              {/*       bg: useColorModeValue("neutral.200", "neutralD.400"), */}
+              {/*     }} */}
+              {/*     onMouseEnter={onOpen} */}
+              {/*     onMouseLeave={onClose} */}
+              {/*     rounded="full" */}
+              {/*   > */}
+              {/*     <IconButton */}
+              {/*       aria-label="Addtional Menu" */}
+              {/*       variant="ghost" */}
+              {/*       icon={<Icon as={DotsHorizontalIcon} />} */}
+              {/*     /> */}
+              {/*   </MenuButton> */}
+              {/*   <MenuList */}
+              {/*     bg={useColorModeValue("white", "neutralD.100")} */}
+              {/*     borderColor={useColorModeValue("neutral.400", "neutralD.400")} */}
+              {/*     onMouseEnter={onOpen} */}
+              {/*     onMouseLeave={onClose} */}
+              {/*   > */}
+              {/*     <Link href="/books"> */}
+              {/*       <MenuItem */}
+              {/*         _hover={{ */}
+              {/*           bg: useColorModeValue("neutral.200", "neutralD.200"), */}
+              {/*         }} */}
+              {/*       > */}
+              {/*         <HStack> */}
+              {/*           <Icon */}
+              {/*             as={BookOpenIcon} */}
+              {/*             size={18} */}
+              {/*             color={useColorModeValue("blue.500", "blue.200")} */}
+              {/*           /> */}
+              {/*           <Text>Books</Text> */}
+              {/*         </HStack> */}
+              {/*       </MenuItem> */}
+              {/*     </Link> */}
+              {/*     <Link href="/bookmarks"> */}
+              {/*       <MenuItem */}
+              {/*         _hover={{ */}
+              {/*           bg: useColorModeValue("neutral.200", "neutralD.200"), */}
+              {/*         }} */}
+              {/*       > */}
+              {/*         <HStack> */}
+              {/*           <Icon */}
+              {/*             as={BookmarkIcon} */}
+              {/*             size={18} */}
+              {/*             color={useColorModeValue("blue.500", "blue.200")} */}
+              {/*           /> */}
+              {/*           <Text>Bookmarks</Text> */}
+              {/*         </HStack> */}
+              {/*       </MenuItem> */}
+              {/*     </Link> */}
+              {/*     <Link href="/tools"> */}
+              {/*       <MenuItem */}
+              {/*         _hover={{ */}
+              {/*           bg: useColorModeValue("neutral.200", "neutralD.200"), */}
+              {/*         }} */}
+              {/*       > */}
+              {/*         <HStack> */}
+              {/*           <Icon */}
+              {/*             as={LightningBoltIcon} */}
+              {/*             size={18} */}
+              {/*             color={useColorModeValue("blue.500", "blue.200")} */}
+              {/*           /> */}
+              {/*           <Text>Tools</Text> */}
+              {/*         </HStack> */}
+              {/*       </MenuItem> */}
+              {/*     </Link> */}
+              {/*   </MenuList> */}
+              {/* </Menu> */}
             </HStack>
             <HStack>
               <ThemeToggle />
