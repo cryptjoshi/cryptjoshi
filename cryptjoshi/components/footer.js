@@ -43,43 +43,43 @@ const footer = () => {
           © {date} cryptjoshi{" "}
         </Text>
 
-        <HStack spacing={4}>
-          <Link href="https://twitter.com/cryptjoshi" isExternal unstyled>
-            <IconButton
-              size={"sm"}
-              icon={<Icon as={TwitterLogo} weight="fill" />}
-              color={useColorModeValue("neutral.800", "neutralD.1000")}
-            ></IconButton>
-          </Link>
-          <Link isExternal unstyled={true}>
-            <IconButton
-              size={"sm"}
-              icon={<Icon as={LinkedinLogo} weight="fill" />}
-              color={useColorModeValue("neutral.800", "neutralD.1000")}
-            ></IconButton>
+        {/* <HStack spacing={4}> */}
+        {/*   <Link href="https://twitter.com/cryptjoshi" isExternal unstyled> */}
+        {/*     <IconButton */}
+        {/*       size={"sm"} */}
+        {/*       icon={<Icon as={TwitterLogo} weight="fill" />} */}
+        {/*       color={useColorModeValue("neutral.800", "neutralD.1000")} */}
+        {/*     ></IconButton> */}
+        {/*   </Link> */}
+        {/*   <Link isExternal unstyled={true}> */}
+        {/*     <IconButton */}
+        {/*       size={"sm"} */}
+        {/*       icon={<Icon as={LinkedinLogo} weight="fill" />} */}
+        {/*       color={useColorModeValue("neutral.800", "neutralD.1000")} */}
+        {/*     ></IconButton> */}
 
-          </Link>
-          <Link isExternal unstyled={true}>
-            <IconButton
-              size={"sm"}
-              icon={<Icon as={GithubLogo} weight="fill" />}
-              color={useColorModeValue("neutral.800", "neutralD.1000")}
-            ></IconButton>
-
-
-          </Link>
-          <Link isExternal unstyled={true}>
-            <IconButton
-              size={"sm"}
-              icon={<Icon as={YoutubeLogo} weight="fill" />}
-              color={useColorModeValue("neutral.800", "neutralD.1000")}
-            ></IconButton>
+        {/*   </Link> */}
+        {/*   <Link isExternal unstyled={true}> */}
+        {/*     <IconButton */}
+        {/*       size={"sm"} */}
+        {/*       icon={<Icon as={GithubLogo} weight="fill" />} */}
+        {/*       color={useColorModeValue("neutral.800", "neutralD.1000")} */}
+        {/*     ></IconButton> */}
 
 
-          </Link>
+        {/*   </Link> */}
+        {/*   <Link isExternal unstyled={true}> */}
+        {/*     <IconButton */}
+        {/*       size={"sm"} */}
+        {/*       icon={<Icon as={YoutubeLogo} weight="fill" />} */}
+        {/*       color={useColorModeValue("neutral.800", "neutralD.1000")} */}
+        {/*     ></IconButton> */}
 
-        </HStack>
-        <FooterLink href="/privacy" name="Privacy" />
+
+        {/*   </Link> */}
+
+        {/* </HStack> */}
+        {/* <FooterLink href="/privacy" name="Privacy" /> */}
       </HStack>
     </Container>
   )
