@@ -6,7 +6,7 @@ const Home = ({ quotes }) => {
     <Box as="h1">
       <Section>
         <VStack spacing={8}>
-          <SimpleGrid column={1} spacing={4} mt={8} w="100%">
+          <SimpleGrid column={1} spacing={4} w="100%">
             {quotes.map((qoute) => (
               <Card title="I am Cryptjoshi" desc={qoute.q} foot={qoute.a} />
             ))}
