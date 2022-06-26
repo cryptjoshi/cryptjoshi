@@ -42,9 +42,9 @@ import { motion } from "framer-motion"
 
 const key1 = keyframes`
   0% {transform: scale(1) rotate(0); border-radius:20%}
-  25% { transform: scale(2) rotate(0); border-radius: 20%; }
-  50% { transform: scale(2) rotate(270deg); border-radius: 50%; }
-  75% { transform: scale(1) rotate(270deg); border-radius: 50%; }
+  25% { transform: scale(1) rotate(0); border-radius: 20%; }
+  50% { transform: scale(1) rotate(270deg); border-radius: 20%; }
+  75% { transform: scale(1) rotate(270deg); border-radius: 20%; }
   100% { transform: scale(1) rotate(0); border-radius: 20%; }
 `
 const animate1 = `${key1} 2s ease-in-out infinite`
@@ -105,14 +105,15 @@ const Header = () => {
           <HStack justify="space-between" w="100%" h={16}>
             <AvatarNavigation />
             <HStack ml={-4} spacing={8}>
-              <Link href="/code">
-                <Button variant={"ghost"}
+              <Link href="/coder">
+                <Button as="div.motion" variant={"ghost"}
                   _hover={{ animation: animate1 }}>
-                  <Text>Code</Text>
+                  <Text>Coder</Text>
                 </Button>
               </Link>
               <Link href="/devops">
-                <Button variant={"ghost"}>
+                <Button as="div.motion" variant={"ghost"}
+                  _hover={{ animation: animate1 }}>
                   <Text>Devops</Text>
                 </Button>
               </Link>
