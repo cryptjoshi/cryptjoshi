@@ -22,6 +22,7 @@ import {
   Icon,
   Avatar,
   useDisclosure,
+  keyframes
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Container from "./container";
@@ -37,6 +38,16 @@ import {
 } from "@heroicons/react/solid";
 import Link from "next/link";
 import AvatarNavigation from "./avatar-navigation";
+import { motion } from "framer-motion"
+
+const key1 = keyframes`
+  0% {transform: scale(1) rotate(0); border-radius:20%}
+  25% { transform: scale(1) rotate(0); border-radius: 20%; }
+  50% { transform: scale(1) rotate(270deg); border-radius: 20%; }
+  75% { transform: scale(1) rotate(270deg); border-radius: 20%; }
+  100% { transform: scale(1) rotate(0); border-radius: 20%; }
+`
+const animate1 = `${key1} 2s ease-in-out infinite`
 
 function NavLink(props) {
   const { href, name, ...rest } = props;
@@ -93,7 +104,19 @@ const Header = () => {
         <VStack align="start" spacing={0}>
           <HStack justify="space-between" w="100%" h={16}>
             <AvatarNavigation />
-            <HStack ml={-4} spacing={2}>
+            <HStack ml={-4} spacing={8}>
+              <Link href="/coder">
+                <Button as="div.motion" variant={"ghost"}
+                  _hover={{ animation: animate1 }}>
+                  <Text>Coder</Text>
+                </Button>
+              </Link>
+              <Link href="/devops">
+                <Button as="div.motion" variant={"ghost"}
+                  _hover={{ animation: animate1 }}>
+                  <Text>Devops</Text>
+                </Button>
+              </Link>
               {/* <Menu isOpen={isOpen}> */}
               {/*   <MenuButton */}
               {/*     bg={useColorModeValue("neutral.100", "neutralD.300")} */}
