@@ -117,6 +117,12 @@ const Header = () => {
                   <Text>Devops</Text>
                 </Button>
               </Link>
+              <Link href="/dnd">
+                <Button as="div.motion" variant={"ghost"}
+                  _hover={{ animation: animate1 }}>
+                  <Text>Dnd</Text>
+                </Button>
+              </Link>
               {/* <Menu isOpen={isOpen}> */}
               {/*   <MenuButton */}
               {/*     bg={useColorModeValue("neutral.100", "neutralD.300")} */}
