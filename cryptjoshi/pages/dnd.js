@@ -1,4 +1,5 @@
 // import { DraggableContainer, DraggableChild } from 'react-dragline'
+import { useState } from 'react'
 import Draggable from 'react-draggable'
 
 const initialChildren = [
@@ -27,26 +28,64 @@ const Dnd = () => {
     alignItems: 'center',
     cursor: 'move',
   }
-  function handleStart() { }
-  function handleStop() { }
-  function handleDrag() { }
+
+
+  const [state, setState] = useState({
+    activeDrags: 0,
+    deltaPosition: { x: 0, y: 0 },
+    controlledPostion: { x: -400, y: 200 }
+  })
+  // const _state = {
+  //   activeDrags: 0,
+  //   deltaPosition: { x: 0, y: 0 },
+  //   controlledPostion: { x: -400, y: 200 }
+  // }
+
+  // setState(state => ({
+  //   ...state,
+  //   _state
+  // }))
+
+  const onStart = () => { }
+  const onStop = () => { }
+
+  const handleDrag = (e, ui) => {
+    console.log(e, ui)
+    const { x, y } = state.deltaPosition;
+    setState(state => ({
+      deltaPosition: {
+        x: x + ui.deletaX,
+        y: y + ui.deletaY
+      }
+    }))
+  }
+
+  const dragHandlers = { onStart: onStart, onStop: onStop }
+  const { deltaPosition, controlledPostion } = state
+
   return (
-    <Draggable
-      axis='x'
-      handle='.handle'
-      defaultPosition={{ x: 0, y: 0 }}
-      position={null}
-      grid={[25, 25]}
-      scale={1}
-      onStart={handleStart}
-      onDrag={handleDrag}
-      onStop={handleStop}
-    >
-      <div>
-        <div className='handle'>Drag From here</div>
-        <div>This readme is really dragging on...</div>
+    // {/* <Draggable onDrag={handleDrag} {...dragHandlers}> */}
+    // {/*   <div className='box'> */}
+    // {/*     <div>Tracking Deta</div> */}
+    // {/*     <div>x:{deltaPosition.x.toFixed(0)},y:{deltaPosition.y.toFixed(0)}</div> */}
+    // {/*   </div> */}
+    // {/* </Draggable> */}
+    <div className="box" style={{ height: '500px', width: '500px', position: 'relative', overflow: 'auto', padding: '0' }}>
+      <div style={{ height: '1000px', width: '1000px', padding: '10px' }}>
+        <Draggable bounds="parent" {...dragHandlers}>
+          <div className="box">
+            I can only be moved within my offsetParent.<br /><br />
+            Both parent padding and child margin work properly.
+          </div>
+        </Draggable>
+        <Draggable bounds="parent" {...dragHandlers}>
+          <div className="box">
+            I also can only be moved within my offsetParent.<br /><br />
+            Both parent padding and child margin work properly.
+          </div>
+        </Draggable>
       </div>
-    </Draggable>
+    </div>
   )
 
 }

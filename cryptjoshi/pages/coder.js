@@ -14,7 +14,7 @@ const Coder = ({ skills }) => {
         <Wrap spacing={4} justify={"center"}>
           {skills.filter(skill => skill.type == "skill").map((skill) =>
           (
-            <WrapItem>
+            <WrapItem key={skill.name}>
               <Center>
                 <Card title={skill.name} desc={""} type={"plain"} />
               </Center>
